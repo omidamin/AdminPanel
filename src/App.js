@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import { withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import Spiner from './tools/Spinner/SpinnerSimple'
+import Ax from "./tools/Ax";
+import Admin from './Component/Admin/route'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+
+    render() {
+
+        let routes = (
+            <Ax>
+              <Admin/>
+            </Ax>
+        );
+
+        return (
+            <div>
+                {this.props.get.loading ? <Spiner/> : null}
+                {routes}
+            </div>
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        get: state.main
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        set: (data, type) => dispatch({type: type, data: data}),
+    };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+
