@@ -8,6 +8,7 @@ import Auth from './Component/Auth/route'
 import Panel from './Component/Panels/route'
 import './tools/scss/public.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
 
 class App extends Component {
 

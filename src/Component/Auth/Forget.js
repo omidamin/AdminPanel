@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Button, Input} from 'reactstrap';
+import message from 'antd/lib/message'
 
 import Layout from './children/AuthLayout'
 
@@ -9,15 +10,25 @@ class Forget extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            email:''
+        }
     }
 
 
-    ReserPass(){
-        let emailExist=true
-        if (emailExist){
-            this.props.history.push('/resetPass')
+    ResetPass(){
+        let emailExist=0
+        if (0){
+            
+        }else {
+            if (emailExist){
+                this.props.history.push('/resetPass')
+            }else {
+                message.warning("this email address dosn't exist")
+
+            } 
         }
+        
     }
     render() {
 
@@ -38,7 +49,10 @@ class Forget extends Component {
                         </p>
                         <br/>
                         <Input className='inputAuth' type='text' placeholder="Email Address"/>
-                        <Button onClick={this.ReserPass.bind(this)} className='ButtonAuth'> Resset Password </Button>
+                        <Button onChange={(email)=>{
+                            {/*console.log(1);*/}
+                            {/*this.setState({})*/}
+                        }} onClick={this.ResetPass.bind(this)} className='ButtonAuth'> Resset Password </Button>
 
                     </div>
                 </Layout>
