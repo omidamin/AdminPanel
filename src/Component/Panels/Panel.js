@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 // import {Button, Container,Input } from 'reactstrap';
-import  './css/Admin.scss'
+import  './css/Panel.scss'
 
-class Admin extends Component {
+class Panel extends Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class Admin extends Component {
 
         return (
             <div>
-                admin
+                panel
             </div>
         );
     }
@@ -35,4 +35,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Admin));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Panel));

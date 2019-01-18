@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Route, Switch, withRouter} from 'react-router-dom';
+import {Route, Switch, withRouter,Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Ax from '../../tools/Ax'
-import Admin from './Admin'
-import Test from './Test/Test'
+import Panel from './Panel'
+import Home from '../Home/Home'
 
 class Services extends Component {
     constructor(props) {
@@ -21,8 +21,9 @@ class Services extends Component {
 
             <Ax>
                 <Switch>
-                    <Route path="/" exact component={Admin}/>
-                    <Route path="/test"  component={Test}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/admin" exact component={Panel}/>
+                    <Redirect from="/" to='/'/>
                 </Switch >
             </Ax>
 

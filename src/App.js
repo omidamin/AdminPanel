@@ -5,8 +5,9 @@ import Spiner from './tools/Spinner/SpinnerSimple'
 
 import Ax from "./tools/Ax";
 import Auth from './Component/Auth/route'
-import Admin from './Component/Admin/route'
+import Panel from './Component/Panels/route'
 import './tools/scss/public.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -18,7 +19,7 @@ class App extends Component {
         if (this.props.get.isAuthenticated){
             routes = (
                 <Ax>
-                    <Auth/>
+                    <Panel/>
                 </Ax>
             );
         }
@@ -26,7 +27,6 @@ class App extends Component {
             routes = (
                 <Ax>
                     <Auth/>
-                    <Admin/>
                 </Ax>
             );
         }

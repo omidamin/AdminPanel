@@ -20,6 +20,39 @@
       left: 50%;
       border-radius: 5px;
 
+      .inputAuth{
+        margin-top:5% ;
+        color: #5e5e5e;
+        height:50px;
+        text-align: center;
+
+      }
+
+      .ButtonAuth{
+        margin:5% 0 ;
+        width: 100%;
+        color: $White1;
+        background: $LBlue;
+        height:50px
+      }
+
+      .contentAuth{
+        margin:10% 10% 0 10%  ;
+        width: 80%;
+        text-align: center;
+      }
+
+      .forgetPass{
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .hr{
+        width: 80%;
+        background: black;
+      }
+
+
       .Header {
         background: $LBlue;
         height: 170px;

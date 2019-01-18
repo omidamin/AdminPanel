@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-// import {Button, Container,Input } from 'reactstrap';
-import  './css/Auth.scss'
+import Layout from './children/AuthLayout'
 
 class Register extends Component {
 
@@ -17,7 +16,10 @@ class Register extends Component {
 
         return (
             <div>
-                Register
+                <Layout>
+                    logout
+                </Layout>
+
             </div>
         );
     }

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-// import {Button, Container,Input } from 'reactstrap';
-import  './css/Auth.scss'
+import {Button,Input } from 'reactstrap';
 import Layout from './children/AuthLayout'
 class Login extends Component {
 
@@ -16,6 +15,15 @@ class Login extends Component {
         return (
             <div>
                 <Layout>
+                    <div className="contentAuth">
+                        <Input className='inputAuth' type='text' placeholder="username"/>
+                        <Input className='inputAuth' type='password' placeholder="password"/>
+                        <hr className='hr' />
+                        <Button className='ButtonAuth'> login </Button>
+                        <div className="forgetPass">
+                            Did you forget your password?
+                        </div>
+                    </div>
 
                 </Layout>
             </div>

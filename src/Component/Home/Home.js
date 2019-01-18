@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import  './css/Test.scss'
-
-class Test extends Component {
+    class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -12,14 +10,13 @@ class Test extends Component {
 
 
     render() {
-
-
         return (
             <div>
-                test
+                <h1>Home</h1>
             </div>
         );
     }
+
 }
 
 const mapStateToProps = state => {
@@ -34,4 +31,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Test));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

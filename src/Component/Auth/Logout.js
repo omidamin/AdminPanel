@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-// import {Button, Container,Input } from 'reactstrap';
-import  './css/Auth.scss'
 
 class Logout extends Component {
 
