@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Login from './Login'
 import Register from './Register'
 import Forget from './Forget'
+import ResetPass from './RessetPassword'
 import  './css/Auth.scss'
 
 class Services extends Component {
@@ -25,6 +26,7 @@ class Services extends Component {
                     <Route path="/signIn"  component={Login}/>
                     <Route path="/signUp"  component={Register}/>
                     <Route path="/forget"  component={Forget}/>
+                    <Route path="/resetPass"  component={ResetPass}/>
                     <Redirect from="/" to='signIn'/>
                 </Switch >
 

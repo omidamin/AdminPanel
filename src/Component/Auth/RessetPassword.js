@@ -1,24 +1,22 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {Button, Input} from 'reactstrap';
-
+import {Button} from 'reactstrap';
+import message from 'antd/lib/message'
 import Layout from './children/AuthLayout'
 
-class Forget extends Component {
+class RessetPassword extends Component {
 
     constructor(props) {
         super(props);
         this.state = {}
     }
 
-
-    ReserPass(){
-        let emailExist=true
-        if (emailExist){
-            this.props.history.push('/resetPass')
-        }
+    ResetPass(){
+        console.log(1);
+        message.warning('check your email address')
     }
+
     render() {
 
 
@@ -33,12 +31,10 @@ class Forget extends Component {
                         <br/>
 
                         <p>
-                            Enter the email address associated with your account, and we’ll email you a link to reset
-                            your password
+                            Thank you. A reset password link has been sent to [insert user’s email]. Please check your junk/spam folder.
                         </p>
                         <br/>
-                        <Input className='inputAuth' type='text' placeholder="Email Address"/>
-                        <Button onClick={this.ReserPass.bind(this)} className='ButtonAuth'> Resset Password </Button>
+                        <Button onClick={this.ResetPass.bind(this)} className='ButtonAuth'> ok </Button>
 
                     </div>
                 </Layout>
@@ -60,4 +56,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Forget));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RessetPassword));
