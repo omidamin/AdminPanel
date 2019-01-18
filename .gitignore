@@ -4,10 +4,21 @@
 /node_modules
 /.pnp
 .pnp.js
+
 /.idea
 /.idea/
 .idea/
 .idea
+
+/.firebase
+/.firebase/
+.firebase/
+.firebase
+
+.firebaserc
+
+firebase.json
+
 
 # testing
 /coverage

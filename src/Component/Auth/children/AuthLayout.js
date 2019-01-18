@@ -16,9 +16,12 @@ class AuthLayout extends Component {
 
         return (
             <div className="AuthLayout">
-                <div className="centered">
+                <div className="centeredAuth">
                     <div className="AuthBox">
-
+                        <div className="Header">
+                            <img className="logo" src="/images/svg/logo_splash.svg" alt="logo"/>
+                        </div>
+                        {this.props.children}
                     </div>
                 </div>
 
